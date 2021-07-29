@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const host = process.env.DB_HOST || '127.0.0.1'
-const dbURI = 'mongodb://${host}/travlr';
+const dbURI = 'mongodb://localhost/travlr';
 const readLine = require('readline');
 
 // avoid 'current Server Discovery and Monitoring engine is deprecated'
@@ -14,16 +14,15 @@ const connect = () => {
 }
 
 mongoose.connection.on('connected', () => {
-    console.log('connected');
+    console.log('Mongoose connected to ${dbURI}');
 });
 
 mongoose.connection.on('error', err => {
-    console.log('error: ' + err);
-    return connect();
+    console.log('Mongoose connection error: ${err}');
 });
 
 mongoose.connection.on('disconnected', () => {
-    console.log('disconnected');
+    console.log('Mongoose disconnected');
 });
 
 if (process.platform === 'win32') {
