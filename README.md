@@ -17,7 +17,7 @@ Creating Handlebars partials files to contain editable data helped to segment tr
 Methods for request and retrieval are contained within controller files, which provide the logic needed to build database queries which are sent according to corresponding endpoints defined in route files. A layer of security is added to controller methods which validates that the user is known by the system, using a JSON Web Token which ensures that the user making the requests is logged in with a username and password. The password is not stored in the database, but is reformatted with a hash and salt value to protect its actual value. The authentication result is awaited by a Promise which was created when the authorization check was initiated by the controller.
 
 -How has this course helped you in reaching your professional goals? What skills have you learned, developed, or mastered in this course to help you become a more marketable candidate in your career field?
-Obtaining the skills to 
+Obtaining the basic skills to develop both public facing and administrative portions of a full stack professional website is what I'll be needing in my future as so much business activity is conducted via online applications. Working to ensure the security of such applications is one of my top priorities, especially when compliance with regulations surrounding financial and personal data is required. I am also grateful to have been exposed to complex Angular development in a structured classroom setting, as I've benefitted from the guidance of the knowledgable people who assembled this course curriculum. 
 
 Reference:
 Holmes, S., Harber, C. (2019). Getting MEAN with Mongo, Express, Angular, and Node.js 2ED. Manning Publications.  
